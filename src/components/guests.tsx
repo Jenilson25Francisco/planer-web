@@ -1,4 +1,5 @@
 import { CircleDashed, UserCog } from "lucide-react"
+import { Button } from "./button"
 
 export const Guests = () => {
     return (
@@ -28,12 +29,10 @@ export const Guests = () => {
                     <CircleDashed className="text-zinc-400 size-5 shrink-0" />
                 </div>
             </div>
-            <button
-                className="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-medium rounded-lg flex items-center justify-center gap-2 px-5 h-11"
-            >
+            <Button variant="secondary" size="full">
                 <UserCog className="size-5" />
                 Gerenciar Convidados
-            </button>
+            </Button>
         </div>
     )
 } 

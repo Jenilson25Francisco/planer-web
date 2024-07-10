@@ -1,4 +1,6 @@
 import { ArrowRight, Calendar, MapPin, Settings2 } from "lucide-react";
+import { VariantProps } from 'tailwind-variants';
+import { Button } from "../button";
 
 type DestinationAndDateStepsProps = {
     isGuestInputOpen: boolean
@@ -37,21 +39,17 @@ export function DestinationAndDateSteps({ isGuestInputOpen,
             <div className="w-px h-6 bg-zinc-800" />
             {
                 isGuestInputOpen ? (
-                    <button
-                        onClick={closeGuestInput}
-                        className="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-medium rounded-lg flex items-center gap-2 px-5 py-2"
-                    >
+
+                    <Button onClick={closeGuestInput} variant="secondary">
                         Alterar local/data
                         <Settings2 className="size-5" />
-                    </button>
+                    </Button>
                 ) : (
-                    <button
-                        onClick={openGuestsInput}
-                        className="bg-lime-300 hover:bg-lime-400 text-lime-950 font-medium rounded-lg flex items-center gap-2 px-5 py-2"
-                    >
+
+                    <Button onClick={openGuestsInput} variant="primary">
                         Continuar
                         <ArrowRight className="size-5" />
-                    </button>
+                    </Button>
                 )
             }
         </div>
